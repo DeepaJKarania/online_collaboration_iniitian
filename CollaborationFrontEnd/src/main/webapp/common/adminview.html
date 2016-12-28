@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Collaboration</title>
+</head>
+<body>
+	<div class="navbar navbar-fixed-top headroom">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+
+
+				<a class="navbar-brand" href="index.html"><img
+					src="resources/assets/images/clog.png"  height="50"  width="150"
+					alt="Collaboration"></a>
+
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li class="active"><a href="#">HOME</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">USER<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/listusersadmin">APPROVE</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">BLOG<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/viewblogs">VIEW</a></li>
+							<li><a href="#/approveblogs">APPROVE</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">FORUM<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/viewforums">VIEW</a></li>
+							<li><a href="#/approveforums">APPROVE</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">BULLETIN<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/addbulletin">ADD</a></li>
+							<li><a href="#/viewbulletin">VIEW</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">EVENT<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/addevent">ADD</a></li>
+							<li><a href="#/viewevents">VIEW</a></li>
+						</ul>
+					</li>
+					<li><a ng-hide="currentUser.useremail==undefined"
+						href="#/home" ng-click="ctrl.logoutuser()">LOGOUT</a></li>
+					<li style="font-weight: bold; color: black;"
+						ng-show="currentUser.useremail!==undefined">
+ 						<br/><br/>Welcome ADMIN 
+</li>
+</ul>
+			</div>
+		
+		</div>
+	</div>
+	
+</body>
+</html>

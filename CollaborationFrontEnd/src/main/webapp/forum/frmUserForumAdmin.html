@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Collaboration</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+<script src="resources/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+	<div class="generic-container" ng-controller="ForumController as ctrl">
+		<br/><br/><br/>
+		<h3>FORUMS</h3>
+		<table class="table table-striped" style="width: 100%">
+			<tr style="font-weight: bold;">
+				<td style="width: 10%">ID</td>
+				<td style="width: 10%">POST DATE</td>
+				<td style="width: 20%">TITLE</td>
+				<td style="width: 40%">DESCRIPTION</td>
+				<td style="width: 10%">FORUM CREATOR</td>
+				<td style="width: 10%">APPROVE</td>
+			</tr>
+			<tr ng-repeat="uf in ctrl.forums | filter : { approve: 'N' }:true">
+				<td style="width: 10%">{{uf.forumid}}</td>
+				<td style="width: 10%">{{uf.createdate}}</td>
+				<td style="width: 20%">{{uf.title}}</td>
+				<td style="width: 40%">{{uf.description}}</td>
+				<td style="width: 10%">{{uf.useremail}}</td>
+				<td style="width: 10%">
+					<input type="button" class="btn btn-danger" value="Approve" ng-click="ctrl.approveforum(uf.forumid)">
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
